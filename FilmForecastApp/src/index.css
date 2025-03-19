@@ -10,5 +10,7 @@
   justify-content: center;
   text-align: center;
   flex-direction: column;
+  background-color: #0a0b0b;
+  color: rgb(199, 191, 191);
 }
 

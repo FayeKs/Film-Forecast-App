@@ -5,6 +5,7 @@ import wind from '../../assets/icons/wind.png'
 import humidity from '../../assets/icons/humidity.png'
 import rain from '../../assets/icons/rain.png'
 
+
 const WeatherDisplay = () => {
   return (
     <div className='weatherDisplay'>
@@ -15,9 +16,18 @@ const WeatherDisplay = () => {
          <p>75 F</p>
         </div>
         <div className='currentWeather'>
-            <li><img src={wind} alt="" /></li>
-            <li><img src={rain} alt="" /></li>
-            <li><img src={humidity} alt="" /></li>
+            <li>
+                <img src={wind} alt="" />
+                <p>Wind</p>
+            </li>
+            <li>
+                <img src={rain} alt="" />
+                <p>precipitation</p>
+            </li>
+            <li>
+                <img src={humidity} alt="" />
+                <p>humidity</p>
+            </li>
         </div>
     </div>
   )

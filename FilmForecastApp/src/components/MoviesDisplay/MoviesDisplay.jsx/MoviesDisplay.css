@@ -3,8 +3,18 @@
     margin: 5px;
     height: 200px;
     border-radius: 15px;
+    border-width: 1px;
+    background-color: rgb(11, 11, 12);
 }
 
 .moviesDisplay p {
+    margin: 10px;
     font-size: 10px;
+}
+
+.movies {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    gap: 10px;
 }

@@ -1,5 +1,8 @@
 input {
     margin: 10px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
 }
 
 .currentForecast {
@@ -15,7 +18,7 @@ input {
     list-style: none;
     display: flex;
     justify-content: space-between;
-    margin: 10px;
+    margin: 10px 40px;
 }
 
 .currentForecastIcon {
@@ -23,5 +26,10 @@ input {
 }
 
 .currentWeather li img {
-    width: 30px;
+    width: 20px;
+
+}
+
+.currentWeather li p {
+    font-size: 10px;
 }
