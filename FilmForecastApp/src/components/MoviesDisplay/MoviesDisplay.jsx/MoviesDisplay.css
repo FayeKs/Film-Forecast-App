@@ -1,0 +1,10 @@
+.moviesDisplay {
+    border-style: solid;
+    margin: 5px;
+    height: 200px;
+    border-radius: 15px;
+}
+
+.moviesDisplay p {
+    font-size: 10px;
+}

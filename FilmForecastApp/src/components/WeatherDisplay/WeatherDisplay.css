@@ -1,0 +1,27 @@
+input {
+    margin: 10px;
+}
+
+.currentForecast {
+    margin: 20px;
+}
+
+.currentForecast p {
+    margin-bottom: 20px;
+}
+
+.currentWeather {
+    font-size: 14px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.currentForecastIcon {
+    width: 80px;
+}
+
+.currentWeather li img {
+    width: 30px;
+}
