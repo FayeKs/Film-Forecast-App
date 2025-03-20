@@ -4,6 +4,13 @@ input {
     width: 200px;
     text-align: center;
 }
+.weatherDisplay button {
+    background: transparent;
+    color: white;
+    outline: none;
+    border: none;
+}
+
 
 .currentForecast {
     margin: 20px;
