@@ -28,12 +28,12 @@ input {
     margin: 10px 40px;
 }
 
-.currentForecastIcon {
+.currentForecast img{
     width: 80px;
 }
 
 .currentWeather li img {
-    width: 20px;
+    width: 10px;
 
 }
 
