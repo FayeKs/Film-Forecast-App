@@ -7,6 +7,7 @@ import wind from '../../assets/icons/wind.png'
 import humidity from '../../assets/icons/humidity.png'
 import rain from '../../assets/icons/rain.png'
 import { CiSearch } from "react-icons/ci";
+import MoviesDisplay from '../MoviesDisplay/MoviesDisplay.jsx/MoviesDisplay';
 
 
 
@@ -14,9 +15,10 @@ const WeatherDisplay = () => {
         const [data, setData] = useState({
            fahrenheit: 10,
            name: `London`,
-           humidty: 10,
+           humidity: 11,
            wind: 12,
-           image: sunny
+           image: sunny,
+           weatherCondition: ''
         })
 
 const [name, setName] = useState('')
@@ -28,7 +30,15 @@ const [name, setName] = useState('')
                 axios.get(apiUrl)
                 .then(res => {
                     let imagePath = '';
+                    let precipitation = 0;
+                    let weatherCondition = res.data.weather[0].main; // Default precipitation
                     console.log(res.data);
+
+                    if (res.data.rain){
+                        precipitation = res.data.rain['1h'] || res.data.rain['3h'] || 0;
+                    }
+
+
                     if (res.data.weather[0].main == "Clear") {
                         imagePath = sunny;
                     } else if(res.data.weather[0].main === "Rain") {
@@ -39,7 +49,11 @@ const [name, setName] = useState('')
                         imagePath = Clouds;
                     }
 
-                    setData({...data, fahrenheit: res.data.main.temp, name: res.data.name, humidity: res.data.main.humidity, image: imagePath, wind: res.data.wind.speed
+                    //check for preciptitation 
+
+
+                    setData({...data, fahrenheit: res.data.main.temp, name: res.data.name, humidity: res.data.main.humidity, image: imagePath, wind: res.data.wind.speed,
+                        precipitation: precipitation, weatherCondition: weatherCondition
                         
                     })
                 })
@@ -74,6 +88,7 @@ const [name, setName] = useState('')
                 <p>{data.humidity}%</p>
             </li>
         </div>
+        <MoviesDisplay weatherCondition={data.weatherCondition}/>
     </div>
   )
 }
