@@ -11,7 +11,12 @@ input {
     border: none;
 }
 
-
+.weatherDisplay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 .currentForecast {
     margin: 20px;
 }
@@ -25,7 +30,11 @@ input {
     list-style: none;
     display: flex;
     justify-content: space-between;
-    margin: 10px 40px;
+    padding: 10px;
+    background-color: rgb(149, 170, 171);
+    width: 20%;
+    border-radius: 10px;
+    color: black;
 }
 
 .currentForecast img{
@@ -33,7 +42,7 @@ input {
 }
 
 .currentWeather li img {
-    width: 10px;
+    width: 20px;
 
 }
 

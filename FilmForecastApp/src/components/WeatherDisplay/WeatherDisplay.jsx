@@ -18,8 +18,10 @@ const WeatherDisplay = () => {
            humidity: 11,
            wind: 12,
            image: sunny,
-           weatherCondition: ''
-        })
+           precipitation:10,
+           weatherCondition: '',
+           weatherDescription: ''
+})
 
 const [name, setName] = useState('')
 
@@ -32,6 +34,7 @@ const [name, setName] = useState('')
                     let imagePath = '';
                     let precipitation = 0;
                     let weatherCondition = res.data.weather[0].main; // Default precipitation
+                    let weatherDescription = res.data.weather[0].main;
                     console.log(res.data);
 
                     if (res.data.rain){
@@ -53,7 +56,7 @@ const [name, setName] = useState('')
 
 
                     setData({...data, fahrenheit: res.data.main.temp, name: res.data.name, humidity: res.data.main.humidity, image: imagePath, wind: res.data.wind.speed,
-                        precipitation: precipitation, weatherCondition: weatherCondition
+                        precipitation: precipitation, weatherCondition: weatherCondition, weatherDescription: weatherDescription,
                         
                     })
                 })
@@ -73,7 +76,7 @@ const [name, setName] = useState('')
             <h2>{data.name}</h2>
             <p>{Math.round(data.fahrenheit)}°F</p>
             <img src={data.image} alt="" />
-            <p></p>
+            <p className='weather-description'>{data.weatherDescription}</p>
         </div>
 
 
@@ -83,6 +86,9 @@ const [name, setName] = useState('')
                 <img src={wind} alt="" />
                 <p>{Math.round(data.wind)}mph</p>
             </li>
+            <li>
+                <img src={rain} alt="" />
+               <p>{data.precipitation}%</p></li>
             <li>
                 <img src={humidity} alt="" />
                 <p>{data.humidity}%</p>

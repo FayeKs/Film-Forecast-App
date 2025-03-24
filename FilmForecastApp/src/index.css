@@ -7,10 +7,10 @@
 .app {
   min-height: 100vh;
   display: flex;
-  justify-content: center;
-  text-align: center;
   flex-direction: column;
-  background-color: #0a0b0b;
+  background: url(./assets/icons/veronika-galkina-ANuVzeKDwtg-unsplash.jpg);
   color: rgb(199, 191, 191);
+  align-items: center;
+  justify-content: center;
 }
 
