@@ -8,8 +8,11 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: url(./assets/icons/veronika-galkina-ANuVzeKDwtg-unsplash.jpg);
-  color: rgb(199, 191, 191);
+  
+  background: rgb(0,0,0);
+background: linear-gradient(135deg, #0F0F0F, #1e1e1e);
+  /* background: url(./assets/icons/veronika-galkina-ANuVzeKDwtg-unsplash.jpg); */
+  color: white;
   align-items: center;
   justify-content: center;
 }

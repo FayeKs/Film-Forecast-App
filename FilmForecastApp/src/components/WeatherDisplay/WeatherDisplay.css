@@ -1,24 +1,58 @@
 input {
     margin: 10px;
     border-radius: 10px;
-    width: 200px;
+    width: 80%;
     text-align: center;
+    background: #b5b4b4;
+    color: rgb(1, 1, 122);
+    border: 1px solid #333;
 }
+
 .weatherDisplay button {
-    background: transparent;
+    background: blue;
     color: white;
     outline: none;
     border: none;
+    margin: 5px;
+    padding: 1px 8px;
+    border-radius: 10px;
 }
 
 .weatherDisplay {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+}
+
+
+.forecast {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.forecast p {
+    opacity: 0.7;
+}
+.forecastInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding: 10px;
 }
 .currentForecast {
-    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    background: #252525;
+    border: 1px solid #333;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    height: auto;
+    width: 100%;
 }
 
 .currentForecast p {
@@ -26,19 +60,24 @@ input {
 }
 
 .currentWeather {
+    width: 100%;
     font-size: 14px;
     list-style: none;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 65px;
     padding: 10px;
-    background-color: rgb(149, 170, 171);
-    width: 20%;
+    background: #252525;
+    border: 1px solid #333;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
-    color: black;
+    color: white;
 }
 
 .currentForecast img{
-    width: 80px;
+    width: 60px;
 }
 
 .currentWeather li img {

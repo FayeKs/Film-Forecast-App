@@ -65,18 +65,28 @@ const [name, setName] = useState('')
         }
     
   return (
-    <div className='weatherDisplay'>
-        <input 
-        type="text" 
-        placeholder='Search City'
-        onChange={e => setName(e.target.value)}
-        className='city-input'/>
-        <button onClick={handleClick}><CiSearch/></button>
+      <div className='weatherDisplay'>
+        <div>
+            <h1>Film Forecast</h1>
+            <input 
+            type="text" 
+            placeholder='Search City'
+            onChange={e => setName(e.target.value)}
+            className='city-input'/>
+            <button onClick={handleClick}><CiSearch/></button>
+        </div>
+        <div className='forecast'>
+
         <div className='currentForecast'>
+            <div>
+
             <h2>{data.name}</h2>
             <p>{Math.round(data.fahrenheit)}°F</p>
-            <img src={data.image} alt="" />
-            <p className='weather-description'>{data.weatherDescription}</p>
+            </div>
+            <div className='forecastInfo'>
+                <img src={data.image} alt="" />
+                <p className='weather-description'>{data.weatherDescription}</p>
+            </div>
         </div>
 
 
@@ -93,6 +103,7 @@ const [name, setName] = useState('')
                 <img src={humidity} alt="" />
                 <p>{data.humidity}%</p>
             </li>
+        </div>
         </div>
         <MoviesDisplay weatherCondition={data.weatherCondition}/>
     </div>

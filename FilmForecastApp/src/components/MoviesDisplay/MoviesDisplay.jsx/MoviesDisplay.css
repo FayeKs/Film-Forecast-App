@@ -1,5 +1,4 @@
 .moviesDisplay {
-    margin: 5px;
     display: flex;
     justify-content: center;
 }
@@ -9,6 +8,7 @@
 }
 
 .moviesTop p {
+    opacity: 0.7;
     text-align: center;
     margin: 100%;
     margin: 10px;
@@ -20,16 +20,18 @@
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    margin-top: 30px;
-    border-style: solid;
-    border-radius: 50px;
-    padding: 10px;
+    margin-top: 10px;
+    border-radius: 15px;
+    padding: 15px;
     font-size: 14px;
-    background-color: rgb(0, 3, 99);
+    border: 1px solid #333;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    background: #252525;
     width: 90%;
 }
 
 .movieCard img{
     width: 100px;
-    border-style: solid;
+    border: 2px solid #333;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
