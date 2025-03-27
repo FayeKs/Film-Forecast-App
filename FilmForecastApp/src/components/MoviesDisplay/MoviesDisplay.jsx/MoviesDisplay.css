@@ -1,6 +1,7 @@
 .moviesDisplay {
     display: flex;
     justify-content: center;
+    margin-bottom: 10px;
 }
 .moviesTop {
     width: 100%;

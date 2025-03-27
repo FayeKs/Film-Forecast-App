@@ -32,7 +32,7 @@ const MoviesDisplay = ({weatherCondition}) => {
     axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${movieApiKey}&with_genres=${genreId}&sort_by=popularity.desc`)
       .then((res) => {
       if (Array.isArray(res.data.results)) {
-        setMovieRecommendations(res.data.results.slice(0, 6)) }
+        setMovieRecommendations(res.data.results.slice(0, 8)) }
       })
       .catch((err) => console.log(err));
   }

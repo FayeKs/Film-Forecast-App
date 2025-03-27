@@ -75,6 +75,7 @@ const [name, setName] = useState('')
             className='city-input'/>
             <button onClick={handleClick}><CiSearch/></button>
         </div>
+        <div className='weatherbox'>
         <div className='forecast'>
 
         <div className='currentForecast'>
@@ -93,19 +94,23 @@ const [name, setName] = useState('')
 
         <div className='currentWeather'>
             <li>
+                <p>Wind</p>
                 <img src={wind} alt="" />
                 <p>{Math.round(data.wind)}mph</p>
             </li>
             <li>
+                <p>Rain</p>
                 <img src={rain} alt="" />
                <p>{data.precipitation}%</p></li>
             <li>
+                <p>Humidity</p>
                 <img src={humidity} alt="" />
                 <p>{data.humidity}%</p>
             </li>
         </div>
         </div>
         <MoviesDisplay weatherCondition={data.weatherCondition}/>
+    </div>
     </div>
   )
 }
