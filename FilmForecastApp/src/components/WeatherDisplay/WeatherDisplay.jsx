@@ -79,7 +79,7 @@ const [name, setName] = useState('')
         <div className='forecast'>
 
         <div className='currentForecast'>
-            <div>
+            <div className='forecastDegree'>
 
             <h2>{data.name}</h2>
             <p>{Math.round(data.fahrenheit)}°F</p>
@@ -99,7 +99,7 @@ const [name, setName] = useState('')
                 <p>{Math.round(data.wind)}mph</p>
             </li>
             <li>
-                <p>Rain</p>
+                <p>Chance of rain</p>
                 <img src={rain} alt="" />
                <p>{data.precipitation}%</p></li>
             <li>

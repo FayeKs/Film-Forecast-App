@@ -32,18 +32,27 @@ const MoviesDisplay = ({weatherCondition}) => {
     axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${movieApiKey}&with_genres=${genreId}&sort_by=popularity.desc`)
       .then((res) => {
       if (Array.isArray(res.data.results)) {
-        setMovieRecommendations(res.data.results.slice(0, 8)) }
+        setMovieRecommendations(res.data.results.slice(0, 10)) }
       })
       .catch((err) => console.log(err));
   }
 
+  // functio to render movie display parapgraph bsed on the weather
+  const getWeatherMessage = (condition) => {
+    switch (condition) {
+      case "Clouds":
+        return "Feel-good movies for a cloudy day";
+       case "Clear":
+       return "Perfect weather for an action-packed movie!"; 
+    }
+  }
 
 
   return (
     <div className='moviesDisplay'>
         <div className='movies'>
           <div className='moviesTop'>
-           <p>Today's movie picks based on the current weather </p>
+           <p>{getWeatherMessage(weatherCondition)}</p>
            <hr />
         </div>
            {movieRecommendations.length > 0 ? (
